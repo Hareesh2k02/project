@@ -1,0 +1,35 @@
+<div *ngIf="value;then show;else hide"></div>
+<ng-template #hide>
+  <button (click)="refresh()" class="button"><i class="bi bi-arrow-clockwise"></i></button>
+    <div class="book">No Not Returned Books</div>
+</ng-template>
+<ng-template #show>
+    <div>
+  <button (click)="refresh()" class="button"><i class="bi bi-arrow-clockwise"></i></button>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>IssuedDate</th>
+                        <th>DueDate</th>
+                        <th>Fine</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Data of data;let i=index">
+                        <td >{{Data.book}}</td>
+                        <td class="ti">{{Data.user}}</td>
+                        <td class="ti">{{Data.email}}</td>
+                        <td class="ti">{{Data.issuedDate |date:'dd/MM/yyy'}}</td>
+                        <td class="ti">{{Data.dueDate |date:'dd/MM/yyy'}}</td>
+                        <td class="ti">{{'₹'+Data.fine}}</td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,15 @@
+<div *ngIf="value;then show;else hide" ></div>
+<ng-template #show>
+    <div class="no">
+        <p>No Books</p>  
+    </div>
+</ng-template>
+<ng-template #hide>
+    <div class="book">
+        <p class="name">{{this.book[0].name}}</p>
+        <p class="auth"><span>Atuhor - </span>{{this.book[0].author}}</p>
+        <p class="dis">{{this.book[0].discription}}</p>
+        <button class="return" (click)="remove(book[0]._id)">Return</button>  
+    </div>
+</ng-template>
+

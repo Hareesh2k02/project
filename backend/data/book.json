@@ -1,0 +1,65 @@
+
+  [  {
+        "name": "A Walk in the Woods: Rediscovering America on the Appalachian Trail ",
+        "author":"Bill Bryson",
+        "discription": "The Appalachian Trail stretches from Georgia to Maine and covers some of the most breathtaking terrain in America—majestic mountains, silent forests, sparking lakes. If you’re going to take a hike, it’s probably the place to go. And Bill Bryson is surely the most entertaining guide you’ll find.",
+        "stock": 3
+    },
+    {
+        "name": "I'm a Stranger Here Myself: Notes on Returning to America After Twenty Years Away (Paperback)",
+        "author":"Bill Bryson",
+        "discription": "After living in Britain for two decades, Bill Bryson recently moved back to the United States with his English wife and four children (he had read somewhere that nearly 3 million Americans believed they had been abducted by aliens--as he later put it, it was clear my people needed me)",
+        "stock": 5
+    },
+    {
+        "name": "Eat, Pray, Love",
+        "author":"Elizabeth Gilbert",
+        "discription": "A celebrated writer's irresistible, candid, and eloquent account of her pursuit of worldly pleasure, spiritual devotion, and what she really wanted out of life.Around the time Elizabeth Gilbert turned thirty, she went through an early-onslaught midlife crisis. She had everything an educated, ambitious American woman was supposed to want—a husband, a house, a successful career.",
+        "stock": 8
+    },
+    {
+        "name": "Turn Left At The Trojan Horse: A Would-Be Hero's American Odyssey",
+        "author":"Brad Herzog",
+        "discription": "Turn Left at the Trojan Horse has been described as On the Road meets Eat, Pray, Love because it goes well beyond a road trip. More than just a funny and profound narrative of Brad Herzog's cross-country trek toward a college reunion in Ithaca (New York) and more than another reimagining of Odysseus's ancient journey",
+        "stock": 3
+    },
+    {
+        "name": "Every Day in Tuscany: Seasons of an Italian Life",
+        "author":"Frances Mayes",
+        "discription": "In this sequel to her New York Times bestsellers Under the Tuscan Sun and Bella Tuscany, the celebrated bard of Tuscany (New York Times) lyrically chronicles her continuing, two decades-long love affair with Tuscany's people, art, cuisine, and lifestyle.",
+        "stock": 5
+    },
+    {
+        "name": "The Lost City of Z: A Tale of Deadly Obsession in the Amazon",
+        "author":"David Grann",
+        "discription": "A grand mystery reaching back centuries. A sensational disappearance that made headlines around the world. A quest for truth that leads to death, madness or disappearance for those who seek to solve it. The Lost City of Z is a blockbuster adventure narrative about what lies beneath the impenetrable jungle canopy of the Amazon.",
+        "stock": 7
+    },
+    {
+        "name": "Wild: From Lost to Found on the Pacific Crest Trail",
+        "author":"Cheryl Strayed",
+        "discription": "At twenty-two, Cheryl Strayed thought she had lost everything. In the wake of her mother’s death, her family scattered and her own marriage was soon destroyed. Four years later, with nothing more to lose, she made the most impulsive decision of her life. With no experience",
+        "stock": 4
+    },
+    {
+        "name": "The Great Derangement: A Terrifying True Story of War, Politics, and Religion at the Twilight of the American Empire",
+        "author":"Matt Taibbi",
+        "discription": "A revelatory and darkly comic adventure through a nation on the verge of a nervous breakdown--from the halls of Congress to the bases of Baghdad to the apocalyptic churches of the heartland.",
+        "stock": 1
+    },
+    {
+        "name": "The Lost Continent: Travels in Small-Town America",
+        "author":"Bill Bryson",
+        "discription": "Instead, his search led him to Anywhere, USA; a lookalike strip of gas stations, motels and hamburger outlets populated by lookalike people with a penchant for synthetic fibres. Travelling around thirty-eight of the lower states - united only in their mind-numbingly dreary uniformity - he discovered a continent that was doubly lost",
+        "stock": 6
+    },
+    {
+        "name": "Notes from a Small Island",
+        "author":"Bill Bryson",
+        "discription": "Suddenly, in the space of a moment, I realized what it was that I loved about Britain-which is to say, all of it.After nearly two decades spent on British soil, Bill Bryson - bestselling author of The Mother Tongue and Made in America-decided to return to the United States. (I had recently read,Bryson writes,that 3.7 million Americans believed that they had been abducted by aliens at one time or another, so it was clear that my people needed me.)",
+        "stock": 2
+    }]
+    
+    
+
+

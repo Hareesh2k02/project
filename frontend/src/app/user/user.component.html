@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<div class="contain">
+    <div class="box">
+        <app-sidebar (key)="nav($event)"></app-sidebar>
+    </div>
+    <div [ngSwitch]="key">
+    <div class="box2" *ngSwitchCase="1">
+        <input class="search" type="text" [(ngModel)]="search" placeholder="Search book here...">
+        <ul>
+            <li *ngFor="let Book of book|filter:search;let i=index"><a href="javascript:void(0)" (click)="getbookid(Book._id)"><div class="title">{{Book.name}}</div><p class="auth">Author - {{Book.author}}</p></a></li>
+        </ul>
+    </div>
+
+    <div *ngSwitchCase="2" class="box2"><app-one-book (key)="nav($event)"></app-one-book></div>
+    <div *ngSwitchCase="3" class="box2"><app-mybook (key)="nav($event)"></app-mybook></div>
+    <div *ngSwitchCase="4" class="box2"><app-notification (key)="nav($event)"></app-notification></div>
+
+</div>
+

@@ -1,0 +1,112 @@
+<div [ngSwitch]="key">
+    <div *ngSwitchCase="1">
+        <button class="button" (click)="bookid(-1)"><i class="bi bi-journal-plus"></i> Add Book</button>
+        <button (click)="refresh()" class="button"><i class="bi bi-arrow-clockwise"></i></button>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Stock</th>
+                        <th>Modify</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Book of book;let i=index">
+                        <td >{{Book.name}}</td>
+                        <td class="ti">{{Book.author}}</td>
+                        <td class="ti">{{Book.stock}}</td>
+                        <td class="ti"><button class="modify" (click)="bookid(i)"><i class="bi bi-pencil-square"></i></button></td>
+                        <td class="ti"><button class="remove" (click)="delete(Book._id)"><i class="bi bi-x-octagon"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+<!-----------Modify book Form---------->
+
+<div *ngSwitchCase="2">
+    <div class="form">
+        <form novalidate #edit="ngForm" (ngSubmit)="edit.form.valid&&onSubmit()">
+            <h3>Modify Book</h3>
+            <div class="tag">
+                <label >Name</label>
+                <input class="tag2" type="text" name="title" [(ngModel)]="editbook.name" [value]="this.editbook.name" #title="ngModel" required>
+                <span  *ngIf="this.submit&&title.errors?.['required']" >
+                    Name is required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Author</label>
+                <input class="tag2" type="text" name="author" [(ngModel)]="editbook.author" [value]="this.editbook.author" #author="ngModel" required>
+                <span  *ngIf="this.submit&&author.errors?.['required']" >
+                    Author name is required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Discription</label>
+                <input class="tag2" type="text" name="discription" [(ngModel)]="editbook.discription" [value]="this.editbook.discription" #discription="ngModel" required>
+                <span  *ngIf="this.submit&&discription.errors?.['required']" >
+                    Discription is required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Stock</label>
+                <input class="tag2" type="number" name="stock" [(ngModel)]="editbook.stock" [value]="this.editbook.stock" #stock="ngModel" required>
+                <span  *ngIf="this.submit&&stock.errors?.['required']" >
+                    stock is required.
+                </span>
+            </div>
+            <div id="loading" *ngIf="this.loading"></div>
+                <span class="text-danger" *ngIf="this.errormessage" >
+                <p [innerText]="this.errormessage"></p>
+                </span>
+            <div class="tag tag1"><button [disabled]="this.loading" (click)="submit=true">submit</button></div>
+        </form>
+    </div>
+</div>
+
+<!---------- Create Book Form ---------->
+<div *ngSwitchCase="3">
+    <div class="form">
+        <form novalidate #edit="ngForm" (ngSubmit)="edit.form.valid&&submitBook()">
+            <h3>Add Book</h3>
+            <div class="tag">
+                <label >Title</label>
+                <input class="tag2" type="text" name="title" [(ngModel)]="bookdata.name"  #title="ngModel" required>
+                <span  *ngIf="this.submit&&title.errors?.['required']" >
+                    Title is required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Author</label>
+                <input class="tag2" type="text" name="author" [(ngModel)]="bookdata.author"  #author="ngModel" required>
+                <span  *ngIf="this.submit&&author.errors?.['required']" >
+                    Author name is required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Discription</label>
+                <input class="tag2" type="text" name="discription" [(ngModel)]="bookdata.discription"  #discription="ngModel" required>
+                <span  *ngIf="this.submit&&discription.errors?.['required']" >
+                    Discription is required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Stock</label>
+                <input class="tag2" type="number" name="stock" [(ngModel)]="bookdata.stock"  #stock="ngModel" required>
+                <span  *ngIf="this.submit&&stock.errors?.['required']" >
+                    stock is required.
+                </span>
+            </div>
+            <div id="loading" *ngIf="this.loading"></div>
+                <span class="text-danger" *ngIf="this.errormessage" >
+                <p [innerText]="this.errormessage"></p>
+                </span>
+            <div class="tag tag1"><button [disabled]="this.loading" (click)="submit=true">submit</button></div>
+        </form>
+    </div>
+</div>

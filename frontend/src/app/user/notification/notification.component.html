@@ -1,0 +1,13 @@
+
+<div *ngIf="value;then show;else hide"></div>
+<ng-template #hide>
+    <div class="book">No Notification</div>
+</ng-template>
+<ng-template #show>
+    <div *ngFor="let data of message;let i=index" class="box">
+        <ul>
+            <li><div class="title"><span>Your </span><span class="kl">'{{data.book}}'</span><span> book request was</span></div><span class="kl">{{data.status}}...</span></li>
+        </ul>
+    </div>
+               
+</ng-template>

@@ -1,0 +1,92 @@
+.box{
+    padding: 20px;
+}
+.name{
+    margin-top: 20px;
+    font-size: 2em
+}
+.auth{
+    font-size: 15px;
+    font-weight: bold;
+}
+span{
+    font-size: 15px;
+}
+.dis{
+    margin-top: 20px;
+}
+.back{
+    border-radius: 50%;
+    border: 1px gray solid;
+}
+.back:hover{
+    background-color: gray;
+    color: whitesmoke;
+}
+.borrow{
+    margin-top: 30px;
+    float: right;
+    padding: 5px 15px;
+    border-radius: 8px;
+    border:1px solid;
+    box-shadow: 2px;
+    border-radius: 8px;
+    margin-right: 50px;
+}
+.borrow:hover{
+    background-color: #2316a0;
+    color: white;
+}
+.warn{
+    float: right;
+    margin-right: 20px;
+    margin-top: 12px;
+    color: red;
+}
+
+
+.form{
+    margin: 5% auto;
+    width: 500px;
+    background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 10px 20px 30px;
+}
+.form h3{
+    text-align: center;
+  }
+  .form label{
+    display: block;
+    margin-bottom: 0;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .form .tag2{
+    width: 100%;
+    font-size: 1em;
+    border-radius: 8px;
+    box-shadow: 2px;
+    padding: 4px 10px;
+    border: 1px solid ;
+    box-sizing: border-box;
+  }
+  #loading {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(9, 5, 204, 0.945);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  

@@ -1,0 +1,111 @@
+<div [ngSwitch]="key">
+    <div *ngSwitchCase="1">
+        <button class="button" (click)="userid(-1)"><i class="bi bi-person-add"></i>&nbsp; Add User</button>
+        <button (click)="refresh()" class="button"><i class="bi bi-arrow-clockwise"></i></button>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Role</th>
+                        <th>Modify</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let User of user;let i=index">
+                        <td >{{User.name}}</td>
+                        <td class="ti">{{User.email}}</td>
+                        <td class="ti">{{User.role}}</td>
+                        <td class="ti"><button class="modify" (click)="userid(i)"><i class="bi bi-pencil-square"></i></button></td>
+                        <td class="ti"><button class="remove" (click)="delete(User._id)"><i class="bi bi-person-x"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div *ngSwitchCase="2">
+        <div class="form">
+            <form novalidate #edit="ngForm" (ngSubmit)="edit.form.valid&&onSubmit()">
+                <h3>Modify User Details</h3>
+                <div class="tag">
+                    <label for="">Name</label>
+                    <input class="tag2" type="text" name="title" [(ngModel)]="edituser.name" [value]="this.edituser.name" #title="ngModel" required>
+                    <span  *ngIf="this.submit&&title.errors?.['required']" >
+                        Name is required.
+                    </span>
+                </div>
+                <div class="tag">
+                    <label for="">Email</label>
+                    <input class="tag2" type="email" name="email" [(ngModel)]="edituser.email" [value]="this.edituser.email" #email="ngModel" [email]="true" required>
+                    <span  *ngIf="this.submit&&email.errors?.['required']" >
+                        User email is required.
+                    </span>
+                </div>
+                <div class="tag tag3">
+                    <label >Role</label>
+                    <select class="sel" name="role" [(ngModel)]="edituser.role" #role="ngModel" required>
+                        <option value="">select</option>
+                        <option  value="user">user</option>
+                        <option value="admin">admin</option>
+                    </select>
+                    <span  *ngIf="this.submit&&role.errors?.['required']" >
+                        Role is required
+                    </span>
+                </div>
+            <div id="loading" *ngIf="this.loading"></div>
+                <span class="text-danger" *ngIf="this.errormessage" >
+                <p [innerText]="this.errormessage"></p>
+                </span>
+            <div class="tag tag1"><button [disabled]="this.loading" (click)="submit=true">submit</button></div>
+        </form>
+    </div>
+</div>
+
+<!-- AddUser -->
+<div *ngSwitchCase="3">
+    <div class="form">
+        <form novalidate #edit="ngForm" (ngSubmit)="edit.form.valid&&submitUser()">
+            <h3>Add User</h3>
+            <div class="tag">
+                <label for="">Name</label>
+                <input class="tag2" type="text" name="title" [(ngModel)]="userdata.name"  #title="ngModel" required>
+                <span  *ngIf="this.submit&&title.errors?.['required']" >
+                    Name is required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Email</label>
+                <input class="tag2" type="email" name="email" [(ngModel)]="userdata.email" [email]="true"  #email="ngModel" required>
+                <span  *ngIf="this.submit&&email.errors?.['required']" >
+                    Email required.
+                </span>
+            </div>
+            <div class="tag">
+                <label for="">Password</label>
+                <input class="tag2" type="text" name="password" [(ngModel)]="userdata.password"  #password="ngModel" required>
+                <span  *ngIf="this.submit&&password.errors?.['required']" >
+                    Password is required.
+                </span>
+            </div>
+            <div class="tag3">
+                <label >Role</label>
+                <select class="sel" name="role" [(ngModel)]="userdata.role" #role="ngModel" required>
+                    <option value="">select</option>
+                    <option  value="user">user</option>
+                    <option value="admin">admin</option>
+                </select><br>
+                <span  *ngIf="this.submit&&role.errors?.['required']" >
+                    Role is required
+                </span>
+            </div>
+            <div id="loading" *ngIf="this.loading"></div>
+                <span class="text-danger" *ngIf="this.errormessage" >
+                <p [innerText]="this.errormessage"></p>
+                </span>
+            <div class="tag tag1"><button [disabled]="this.loading" (click)="submit=true">submit</button></div>
+        </form>
+    </div>
+</div>

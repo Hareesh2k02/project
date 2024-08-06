@@ -1,0 +1,34 @@
+<div *ngIf="value;then show;else hide"></div>
+<ng-template #hide>
+  <button (click)="refresh()" class="button"><i class="bi bi-arrow-clockwise"></i></button>
+    <div class="book">No Borrowed Books</div>
+</ng-template>
+<ng-template #show>
+    <div>
+  <button (click)="refresh()" class="button"><i class="bi bi-arrow-clockwise"></i></button>
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>IssuedDate</th>
+                        <th>DueDate</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let Borrow of borrow;let i=index">
+                        <td >{{Borrow.bookId.name}}</td>
+                        <td class="ti">{{Borrow.userId.name}}</td>
+                        <td class="ti">{{Borrow.userId.email}}</td>
+                        <td class="ti">{{Borrow.issuedDate |date:'dd/MM/yyy'}}</td>
+                        <td class="ti">{{Borrow.dueDate |date:'dd/MM/yyy'}}</td>
+                        <td class="ti"><button class="remove" (click)="remove(Borrow._id)"><i class="bi bi-x-octagon"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</ng-template>

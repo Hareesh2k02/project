@@ -1,0 +1,8 @@
+.box{
+    display: flex;
+}
+.box1{   
+    height: 92vh;
+    width: 80vw;
+    overflow: scroll;
+}

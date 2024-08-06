@@ -1,0 +1,15 @@
+li {
+    padding: 15px;
+    text-align: inherit;
+    height: 100px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+.kl{
+    font-weight: bolder;
+}
+.book{
+    text-align: center;
+    padding-top: 300px;
+}

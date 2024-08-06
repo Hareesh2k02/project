@@ -1,0 +1,14 @@
+<app-admin-navbar ></app-admin-navbar>
+<div class="box">
+<app-admin-sidebar (key)="keyvalue($event)"></app-admin-sidebar>
+
+<div [ngSwitch]="keys">
+    <div *ngSwitchCase="1" class="box1"><app-books></app-books></div>
+    <div *ngSwitchCase="2" class="box1"><app-users></app-users></div>
+    <div *ngSwitchCase="3" class="box1"><app-request></app-request></div>
+    <div *ngSwitchCase="4" class="box1"><app-issuebook></app-issuebook></div> 
+    <div *ngSwitchCase="5" class="box1"><app-fineaccount></app-fineaccount></div>
+    <div *ngSwitchCase="6" class="box1"><app-book-status></app-book-status></div>
+    <div *ngSwitchCase="7" class="box1"><app-records></app-records></div>
+</div>
+</div>

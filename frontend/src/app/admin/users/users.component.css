@@ -1,0 +1,211 @@
+#loading {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(9, 5, 204, 0.945);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    -webkit-animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+  @-webkit-keyframes spin {
+    to { -webkit-transform: rotate(360deg); }
+  }
+
+  /* form Design */
+
+.form{
+  margin: 5% auto;
+  width: 500px;
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding: 10px 20px 30px;
+}
+.form h3{
+  text-align: center;
+}
+.form label{
+  display: block;
+  margin-bottom: 0;
+  font-size: 1em;
+  font-weight: 500;
+}
+.form .tag2{
+  width: 100%;
+  font-size: 1em;
+  border-radius: 8px;
+  box-shadow: 2px;
+  padding: 4px 10px;
+  border: 1px solid ;
+  box-sizing: border-box;
+}
+#loading , .tag1{
+  text-align: center;
+}
+.tag1{
+  margin-top: 15px;
+  padding: 1px;
+}
+.tag1 button{
+  padding: 5px 15px;
+  border-radius: 8px;
+  border:1px solid;
+  box-shadow: 2px;
+}
+.tag1 button:hover{
+  background-color: #c5c5c5;
+}
+.form span{
+  color: red;
+  font-size: 0.8em;
+}
+.form .tag{
+  margin-bottom: 10px;
+}
+.tag2:focus{
+  background-color: #c5c5c5;
+  border-style: none;
+}
+.tag3{
+  display: flex;
+}
+.tag3 .sel{
+  margin-left:15px ;
+}
+
+  /* Table Design */
+
+  .table-wrapper{
+    padding: 15px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+  }
+  
+  .fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+  }
+  
+  
+  .fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 14px;
+    padding: 8px;
+    text-align: center;
+  }
+  .ti button{
+    border-style: none;
+  }
+  .fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    font-weight: bold;
+  
+  }
+
+  
+  .fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+  }
+  
+  
+  
+  /* Responsive */
+  
+  @media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+  }
+  .button{
+    padding: 2px;
+    float: right;
+    size: 30px;
+    margin: 15px 20px;
+    border: 20px;
+    border-radius: 5px;
+  }
+  .button:hover{
+    color: gray;
+  }
+  .modify:hover{
+    color: gray;
+  
+  }
+  .remove:hover{
+    color: red;
+  }
